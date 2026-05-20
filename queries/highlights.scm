@@ -82,45 +82,32 @@
 ] @keyword
 
 [
-  "\$alignof"
-  "\$assert"
-  "\$assignable"
-  "\$case"
-  "\$default"
-  "\$defined"
-  "\$echo"
-  "\$else"
-  "\$embed"
-  "\$endfor"
-  "\$endforeach"
-  "\$endif"
-  "\$endswitch"
-  "\$eval"
-  "\$evaltype"
-  "\$error"
-  "\$exec"
-  "\$extnameof"
-  "\$feature"
-  "\$for"
-  "\$foreach"
-  "\$if"
-  "\$include"
-  "\$is_const"
-  "\$kindof"
-  "\$nameof"
-  "\$offsetof"
-  "\$qnameof"
-  "\$sizeof"
-  "\$stringify"
-  "\$switch"
-  "\$typefrom"
-  "\$typeof"
-  "\$vacount"
-  "\$vatype"
-  "\$vaconst"
-  "\$vaarg"
-  "\$vaexpr"
-  "\$vasplat"
+  "$assert"
+  "$case"
+  "$default"
+  "$defined"
+  "$echo"
+  "$else"
+  "$embed"
+  "$endfor"
+  "$endforeach"
+  "$endif"
+  "$endswitch"
+  "$eval"
+  "$error"
+  "$exec"
+  "$expand"
+  "$feature"
+  "$for"
+  "$foreach"
+  "$if"
+  "$include"
+  "$reflect"
+  "$stringify"
+  "$switch"
+  "$Typefrom"
+  "$Typeof"
+  "$vaarg"
 ] @keyword.directive
 
 "assert" @keyword.debug
@@ -266,15 +253,10 @@
 ; Builtin (constants)
 (builtin_const) @constant.builtin
 
-; Type Property (from `c3c --list-type-properties`)
+; Type Property
 (type_access_expr
   (access_ident
-    (ident) @variable.builtin
-    (#any-of? @variable.builtin
-      "alignof" "associated" "elements" "extnameof" "from_ordinal" "get" "inf" "is_eq" "is_ordered"
-      "is_substruct" "len" "lookup" "lookup_field" "max" "membersof" "methodsof" "min" "nan" "inner"
-      "kindof" "names" "nameof" "params" "paramsof" "parentof" "qnameof" "returns" "sizeof" "set"
-      "tagof" "has_tagof" "values" "typeid")))
+    (ident) @variable.builtin))
 
 ; Label
 [
